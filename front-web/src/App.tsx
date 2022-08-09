@@ -14,6 +14,8 @@ function App() {
   const onFilterChange = (filter: FilterData) => {
     setFilterData(filter);
     console.log({ filter });
+    console.log({ filter });
+    console.log({ filter });
   };
 
   return (
