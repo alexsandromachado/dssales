@@ -25,9 +25,9 @@ function App() {
         setSalesByStore(newSalesByStore);
       })
       .catch(() => {
-        console.log('Error to fetch sales by date');
+        console.log('Error to fetch sales by store');
       });
-  }, [filterData]);
+  }, [params]);
 
   useEffect(() => {
     makeRequest
@@ -37,7 +37,7 @@ function App() {
         setSalesByPaymentMethod(newSalesByPaymentMethod);
       })
       .catch(() => {
-        console.log('Error to fetch sales by date');
+        console.log('Error to fetch sales by payment method');
       });
   }, [filterData]);
 
@@ -60,7 +60,7 @@ function App() {
             series={salesByPaymentMethod?.series}
           />
         </div>
-        <SalesTable />
+        <SalesTable filterData={filterData} />
       </div>
     </>
   );

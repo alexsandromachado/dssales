@@ -30,7 +30,7 @@ function SalesSummary({ filterData }: Props) {
         setSummary(response.data);
       })
       .catch(() => {
-        console.log('Error to fetch sales by date');
+        console.log('Error to fetch sales summary');
       });
   }, [filterData]);
 
